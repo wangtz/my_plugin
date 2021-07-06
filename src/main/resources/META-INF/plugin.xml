@@ -16,4 +16,16 @@
         <listener class="org.jetbrains.plugins.template.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+
+    <actions>
+        <group id="MyPlugin.TopMenu"
+               text="_MyPlugin"
+               description="MyPlugin Toolbar Menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="MyAction"
+                    class="actions.MyAction"
+                    text="_MyAction"
+                    description="MyAction"/>
+        </group>
+    </actions>
 </idea-plugin>
